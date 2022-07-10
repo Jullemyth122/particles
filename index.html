@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            overscroll-behavior: none;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 100%;
+            height: 100vh;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</head>
+<body>
+
+    <div id="container"></div>
+    <img src="./images/franky.png" style="display: none;" class="mask2" alt="">
+    <img src="./images/myth.jpg" style="display: none;" class="mask3" alt="">
+    <img src="./images/star.png" style="display: none;" class="mask1" alt="">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.141.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- <script type="x-shader/x-vertex" id="vertexshader">
+
+        varying vec2 vUv;
+
+        void main () {
+            vUv = uv;
+        
+            vec4 mvPosition = modelViewMatrix = vec4(position,1.);
+            gl_PointSize = 50. * (1. / - mvPosition.z);
+            gl_Position = projectionMatrix * mvPosition;
+        
+        }
+
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+
+        void main() {
+            gl_FragColor = vec4(1.,0.,0.,1.);
+        }
+
+    </script> -->
+
+    <script src="./app.js" type="module"></script>
+</body>
+</html>
